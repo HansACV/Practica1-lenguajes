@@ -224,19 +224,19 @@ def menu():
         ingreso = input("ingrese comando: ")
         comando=ingreso.split(maxsplit=1)
         com=comando[0].lower()
-        if com == 'cargar':
+        if (com == 'cargar') and (len(comando)>1):
             Cargar(comando[1])
-        elif com == 'seleccionar':
+        elif (com == 'seleccionar') and (len(comando)>1):
             Selccionar(comando[1])
-        elif com=='maximo':
+        elif (com=='maximo') and (len(comando)>1):
             Maximo(comando[1])
-        elif com=='minimo':
+        elif (com=='minimo') and (len(comando)>1):
             Minimo(comando[1])
-        elif com=='suma':
+        elif (com=='suma') and (len(comando)>1):
             Suma(comando[1])
         elif com=='cuenta':
             print('El total de registros en memoria es: ' + str(len(Lista)))
-        elif com=='reportar':
+        elif (com=='reportar') and (len(comando)>1):
             Reportar(int(comando[1]))
         elif com == 'salir':
             ciclo=False
